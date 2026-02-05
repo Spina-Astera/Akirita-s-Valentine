@@ -6,11 +6,11 @@ interface CelebrationPageProps {
 }
 
 const CelebrationPage: React.FC<CelebrationPageProps> = ({ name }) => {
-  // Reverting to Pixelated character styles with adjusted skin tones
+  // Pixelated character styles with adjusted skin tones
   // Girl: Deep dark skin
   const girlPixel = "https://api.dicebear.com/7.x/pixel-art/svg?seed=Amara&skinColor=3d1e06&backgroundColor=fce4ec";
-  // Boy: Adjusted to be lighter brown
-  const boyPixel = "https://api.dicebear.com/7.x/pixel-art/svg?seed=Kaleb&skinColor=ae5d29&backgroundColor=e3f2fd";
+  // Boy: Adjusted to be even lighter (Tan / Light Brown)
+  const boyPixel = "https://api.dicebear.com/7.x/pixel-art/svg?seed=Kaleb&skinColor=d2b48c&backgroundColor=e3f2fd";
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen px-4 z-10 relative text-center py-20">
@@ -64,7 +64,7 @@ const CelebrationPage: React.FC<CelebrationPageProps> = ({ name }) => {
                 <img 
                   src={boyPixel} 
                   className="rounded-2xl border-4 border-white shadow-xl group-hover:scale-110 transition-transform duration-300 w-full aspect-square object-cover bg-white pixelated" 
-                  alt="Attractive Medium-Skinned Man Pixel Art" 
+                  alt="Attractive Light-Skinned Man Pixel Art" 
                 />
               </div>
               <p className="mt-4 text-pink-500 font-bold italic text-xl">Your Man 🧸</p>

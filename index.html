@@ -38,8 +38,16 @@
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.08); }
         }
+        @keyframes shake {
+          0%, 100% { transform: translateX(0); }
+          25% { transform: translateX(-5px); }
+          75% { transform: translateX(5px); }
+        }
         .animate-pulse-grow {
             animation: pulseGrow 2s ease-in-out infinite;
+        }
+        .animate-shake {
+          animation: shake 0.2s linear infinite;
         }
         .heart-particle {
             position: fixed;
@@ -53,7 +61,7 @@
             image-rendering: pixelated;
             image-rendering: crisp-edges;
         }
-        /* Custom slider thumb for the love slider page */
+        /* Custom slider thumb styles */
         input[type=range]::-webkit-slider-thumb {
           -webkit-appearance: none;
           height: 48px;
@@ -63,6 +71,15 @@
           cursor: pointer;
           border: 4px solid white;
           box-shadow: 0 4px 15px rgba(255, 94, 120, 0.5);
+        }
+        input[type=range]::-moz-range-thumb {
+          height: 48px;
+          width: 48px;
+          border-radius: 50%;
+          background: #ff5e78;
+          cursor: pointer;
+          border: 4px solid white;
+          box-shadow: 0 4px 10px rgba(255, 94, 120, 0.4);
         }
     </style>
 <script type="importmap">

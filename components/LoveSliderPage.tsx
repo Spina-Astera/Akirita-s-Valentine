@@ -37,7 +37,7 @@ const LoveSliderPage: React.FC<LoveSliderPageProps> = ({ onNext, name }) => {
                 max="10000"
                 value={value}
                 onChange={(e) => setValue(parseInt(e.target.value))}
-                className="w-full h-8 bg-pink-100 rounded-full appearance-none cursor-pointer accent-pink-500 slider-thumb-large"
+                className="w-full h-8 bg-pink-100 rounded-full appearance-none cursor-pointer accent-pink-500"
             />
             
             <div className="mt-6 flex flex-col items-center gap-2">
@@ -67,7 +67,7 @@ const LoveSliderPage: React.FC<LoveSliderPageProps> = ({ onNext, name }) => {
                 </div>
             </div>
             
-            {/* Random decorations as seen in screenshot */}
+            {/* Random decorations */}
             <div className="absolute -bottom-10 left-1/4 text-2xl">💝</div>
             <div className="absolute -top-10 right-1/4 text-2xl">❤️</div>
         </div>
@@ -79,28 +79,6 @@ const LoveSliderPage: React.FC<LoveSliderPageProps> = ({ onNext, name }) => {
           Next <span className="text-xl">💖</span>
         </button>
       </div>
-
-      <style dangerouslySetInnerHTML={{ __html: `
-        input[type=range]::-webkit-slider-thumb {
-          -webkit-appearance: none;
-          height: 48px;
-          width: 48px;
-          border-radius: 50%;
-          background: #ff5e78;
-          cursor: pointer;
-          border: 4px solid white;
-          box-shadow: 0 4px 10px rgba(255, 94, 120, 0.4);
-        }
-        input[type=range]::-moz-range-thumb {
-          height: 48px;
-          width: 48px;
-          border-radius: 50%;
-          background: #ff5e78;
-          cursor: pointer;
-          border: 4px solid white;
-          box-shadow: 0 4px 10px rgba(255, 94, 120, 0.4);
-        }
-      `}} />
     </div>
   );
 };
